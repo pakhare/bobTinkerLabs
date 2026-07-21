@@ -1,0 +1,28 @@
+﻿# Secrets - NEVER commit these
+config/api_keys.json
+config/wxo_private.pem
+config/wxo_public.pem
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Runtime data (auto-generated)
+data/local.db
+data/app.log
+data/*.log
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

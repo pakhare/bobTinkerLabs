@@ -1,0 +1,77 @@
+{
+  "mappings": {
+    "manual_data_entry": {
+      "title": "Automate Manual Data Entry",
+      "tools": ["ibm_rpa", "python_pandas", "excel_power_query"],
+      "tutorial_steps": [
+        "Identify the data source (CSV, web form, database).",
+        "Install pandas: pip install pandas openpyxl",
+        "Write a script to read the source and write to the destination.",
+        "Schedule with Windows Task Scheduler.",
+        "Optional: use IBM RPA for GUI-based entry automation."
+      ]
+    },
+    "repetitive_copy_paste": {
+      "title": "Eliminate Copy-Paste with Automation",
+      "tools": ["power_automate", "ibm_rpa", "excel_power_query"],
+      "tutorial_steps": [
+        "Open Microsoft Power Automate.",
+        "Create a new Desktop flow.",
+        "Record the copy-paste sequence.",
+        "Parameterize the source and destination.",
+        "Schedule or trigger the flow automatically."
+      ]
+    },
+    "email_sorting": {
+      "title": "AI-Powered Email Triage",
+      "tools": ["watsonx_ai", "outlook_rules"],
+      "tutorial_steps": [
+        "Open Outlook → File → Manage Rules & Alerts.",
+        "Create rules for subject/sender patterns.",
+        "For advanced classification, integrate watsonx.ai via the API.",
+        "Use IBM App Connect to route emails to correct folders automatically."
+      ]
+    },
+    "document_formatting": {
+      "title": "Automated Document Formatting",
+      "tools": ["python_docx", "watsonx_ai"],
+      "tutorial_steps": [
+        "Install python-docx: pip install python-docx",
+        "Create a Word template (.docx) with placeholder styles.",
+        "Write a Python script to fill the template from a data source.",
+        "Run the script to generate formatted documents in bulk."
+      ]
+    },
+    "file_organization": {
+      "title": "Smart Automated File Organization",
+      "tools": ["watchdog", "ibm_rpa"],
+      "tutorial_steps": [
+        "Install watchdog: pip install watchdog",
+        "Write a handler that classifies files by extension or name pattern.",
+        "Start the watchdog observer on your target directory.",
+        "Files are moved automatically as soon as they appear."
+      ]
+    },
+    "browser_research": {
+      "title": "AI Research Summarization",
+      "tools": ["watsonx_ai"],
+      "tutorial_steps": [
+        "Open IBM watsonx Prompt Lab at cloud.ibm.com.",
+        "Paste the web content you want summarized.",
+        "Use the summarize prompt template.",
+        "Integrate via API to batch-process multiple pages."
+      ]
+    },
+    "report_generation": {
+      "title": "Automated Report Generation Pipeline",
+      "tools": ["python_pandas", "python_docx", "watsonx_ai"],
+      "tutorial_steps": [
+        "Use pandas to read and transform your raw data.",
+        "Use python-docx to populate a report template.",
+        "Use watsonx.ai to write an executive summary section.",
+        "Schedule the pipeline with Windows Task Scheduler.",
+        "Email the output automatically via smtplib."
+      ]
+    }
+  }
+}

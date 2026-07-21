@@ -1,0 +1,6 @@
+# watsonx Backend – IBM Cloud Functions
+# No IBM-specific SDKs needed:
+#   • Cloudant replaced by local SQLite (Python stdlib)
+#   • watsonx.ai replaced by ICA Agentic Studio via plain HTTP
+requests==2.32.3
+flask==3.0.3

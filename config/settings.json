@@ -1,0 +1,30 @@
+{
+  "monitoring": {
+    "poll_interval_seconds": 5,
+    "sync_interval_minutes": 30,
+    "idle_threshold_seconds": 60,
+    "excluded_apps": [
+      "LockApp.exe",
+      "LogonUI.exe"
+    ]
+  },
+  "privacy": {
+    "anonymize_window_titles": true,
+    "track_keyboard_count_only": true,
+    "track_mouse_count_only": true,
+    "excluded_apps": []
+  },
+  "ui": {
+    "theme": "dark",
+    "minimize_to_tray": true,
+    "show_notifications": true
+  },
+  "backend": {
+    "timeout_seconds": 15,
+    "max_retries": 3
+  },
+  "database": {
+    "local_db_path": "data/local.db",
+    "max_local_days": 30
+  }
+}

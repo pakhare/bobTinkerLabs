@@ -1,0 +1,12 @@
+# Client – AI Task Optimizer (Windows Desktop)
+customtkinter==5.2.2
+pywin32==312
+psutil==5.9.8
+pynput==1.7.8
+requests==2.32.3
+Pillow==11.2.1
+pystray==0.19.5
+matplotlib==3.10.1
+pywebview>=5.1
+PyJWT[crypto]>=2.8
+cryptography>=42.0

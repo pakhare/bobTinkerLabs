@@ -1,0 +1,84 @@
+{
+  "tools": [
+    {
+      "id": "ibm_rpa",
+      "name": "IBM RPA",
+      "category": "robotic_process_automation",
+      "description": "Enterprise-grade RPA to automate repetitive desktop and web workflows.",
+      "url": "https://www.ibm.com/products/robotic-process-automation",
+      "best_for": ["manual_data_entry", "repetitive_copy_paste", "file_organization"],
+      "time_saving_estimate_minutes_per_day": 60,
+      "skill_level": "intermediate"
+    },
+    {
+      "id": "watsonx_ai",
+      "name": "IBM watsonx.ai",
+      "category": "ai_platform",
+      "description": "Foundation models and prompt engineering for text understanding, summarization and generation.",
+      "url": "https://www.ibm.com/watsonx",
+      "best_for": ["email_sorting", "browser_research", "report_generation", "document_formatting"],
+      "time_saving_estimate_minutes_per_day": 45,
+      "skill_level": "beginner"
+    },
+    {
+      "id": "power_automate",
+      "name": "Microsoft Power Automate",
+      "category": "workflow_automation",
+      "description": "No-code/low-code automation for Microsoft 365 and third-party connectors.",
+      "url": "https://powerautomate.microsoft.com",
+      "best_for": ["repetitive_copy_paste", "email_sorting", "file_organization"],
+      "time_saving_estimate_minutes_per_day": 40,
+      "skill_level": "beginner"
+    },
+    {
+      "id": "python_pandas",
+      "name": "Python + pandas",
+      "category": "data_processing",
+      "description": "Programmatic data transformation and report generation from CSV/Excel files.",
+      "url": "https://pandas.pydata.org",
+      "best_for": ["manual_data_entry", "report_generation"],
+      "time_saving_estimate_minutes_per_day": 50,
+      "skill_level": "intermediate"
+    },
+    {
+      "id": "python_docx",
+      "name": "python-docx",
+      "category": "document_automation",
+      "description": "Create and update Word documents programmatically with templates.",
+      "url": "https://python-docx.readthedocs.io",
+      "best_for": ["document_formatting", "report_generation"],
+      "time_saving_estimate_minutes_per_day": 25,
+      "skill_level": "intermediate"
+    },
+    {
+      "id": "watchdog",
+      "name": "Python watchdog",
+      "category": "file_automation",
+      "description": "Monitor directory changes and trigger auto-organization scripts.",
+      "url": "https://python-watchdog.readthedocs.io",
+      "best_for": ["file_organization"],
+      "time_saving_estimate_minutes_per_day": 15,
+      "skill_level": "intermediate"
+    },
+    {
+      "id": "outlook_rules",
+      "name": "Outlook Rules + VBA",
+      "category": "email_automation",
+      "description": "Built-in Outlook rules and macros to auto-classify, reply, and move emails.",
+      "url": "https://support.microsoft.com/en-us/office/manage-email-messages-by-using-rules",
+      "best_for": ["email_sorting"],
+      "time_saving_estimate_minutes_per_day": 20,
+      "skill_level": "beginner"
+    },
+    {
+      "id": "excel_power_query",
+      "name": "Excel Power Query",
+      "category": "data_processing",
+      "description": "Built-in Excel ETL tool for transforming and loading data without VBA.",
+      "url": "https://support.microsoft.com/en-us/office/about-power-query-in-excel",
+      "best_for": ["manual_data_entry", "repetitive_copy_paste"],
+      "time_saving_estimate_minutes_per_day": 35,
+      "skill_level": "beginner"
+    }
+  ]
+}
