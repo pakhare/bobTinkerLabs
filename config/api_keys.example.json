@@ -1,0 +1,7 @@
+﻿{
+  "_comment": "Copy this file to api_keys.json and fill in your real credentials. api_keys.json is git-ignored and must never be committed.",
+
+  "ica_api_url":  "https://servicesessentials.ibm.com/apis/v3/ica/agent-registry",
+  "ica_api_key":  "YOUR_ICA_API_KEY",
+  "ica_agent_id": "YOUR_ICA_AGENT_ID"
+}

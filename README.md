@@ -96,7 +96,8 @@ ai-task-optimizer/
 │
 ├── config/
 │   ├── settings.json             ← Tunable parameters (poll interval, privacy, UI)
-│   └── api_keys.json             ← Secrets — never commit this file
+│   ├── api_keys.example.json     ← Committed template — copy to api_keys.json and fill in
+│   └── api_keys.json             ← Real secrets — git-ignored, never committed
 │
 ├── data/                         ← local.db + app.log (auto-created at runtime)
 ├── debug_ica.py                  ← Standalone ICA A2A connectivity probe
@@ -128,7 +129,15 @@ pip install -r requirements.txt
 
 ### 2 — Configure credentials
 
-Edit [`config/api_keys.json`](config/api_keys.json) and fill in your ICA credentials:
+A safe template is already committed at [`config/api_keys.example.json`](config/api_keys.example.json).
+Copy it to `api_keys.json` (which is git-ignored) and fill in your real values:
+
+```powershell
+copy config\api_keys.example.json config\api_keys.json
+notepad config\api_keys.json
+```
+
+Fill in the three ICA fields:
 
 ```json
 {
@@ -138,7 +147,8 @@ Edit [`config/api_keys.json`](config/api_keys.json) and fill in your ICA credent
 }
 ```
 
-> ⚠️ **Never commit `api_keys.json` to version control.** Add it to `.gitignore`.
+> ⚠️ **`api_keys.json` is listed in `.gitignore` and will never be committed.**
+> Only `api_keys.example.json` (with placeholder values) is tracked by git.
 
 Optionally adjust [`config/settings.json`](config/settings.json) to change poll intervals, privacy settings, or the UI theme.
 
@@ -209,6 +219,59 @@ pip install pyinstaller
 cd client
 pyinstaller --onefile --windowed --name "AI Task Optimizer" main.py
 # Output: dist/AI Task Optimizer.exe
+```
+
+---
+
+## Uploading to GitHub
+
+### 1 — Create the repository
+
+1. Go to [github.com](https://github.com) → **New repository**
+2. Name it `ai-task-optimizer`, set visibility to **Private**
+3. Do **not** tick "Add README", "Add .gitignore", or "Choose a licence" — the repo already has all of these
+4. Click **Create repository** and copy the URL shown (e.g. `https://github.com/YOUR_USERNAME/ai-task-optimizer.git`)
+
+### 2 — Initialise git and push
+
+Run these commands from the `ai-task-optimizer` folder:
+
+```powershell
+cd "C:\Users\PrasadKhare\Documents\WatsonX 2026\ai-task-optimizer"
+
+git init
+git add .
+
+# Verify api_keys.json is NOT listed (it must be absent)
+git status
+
+git commit -m "Initial commit: AI Task Optimizer"
+git remote add origin https://github.com/YOUR_USERNAME/ai-task-optimizer.git
+git branch -M main
+git push -u origin main
+```
+
+When prompted for a password, use a **Personal Access Token** (not your GitHub account password):
+GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token → tick **repo** → copy and paste.
+
+### 3 — Confirm secrets are not in the repo
+
+After pushing, open the repo on GitHub and verify:
+
+| File | Should it appear? |
+|---|---|
+| `config/api_keys.json` | ❌ No — gitignored |
+| `config/wxo_private.pem` | ❌ No — gitignored |
+| `config/api_keys.example.json` | ✅ Yes — placeholder only |
+| `.gitignore` | ✅ Yes |
+| `README.md` | ✅ Yes |
+
+If `api_keys.json` appears by mistake, remove it immediately:
+
+```powershell
+git rm --cached config/api_keys.json
+git commit -m "Remove accidentally committed secrets"
+git push
 ```
 
 ---
