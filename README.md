@@ -3,7 +3,7 @@
 > A Windows desktop assistant that silently watches what you do, detects repetitive patterns in real time, and suggests exactly how to automate them — powered by **IBM ICA Agentic Studio** and **IBM watsonx Orchestrate**.
 
 ---
-
+![](https://github.com/pakhare/bobTinkerLabs/blob/main/bobtinkerlabsgiff.gif)
 ## What it does
 
 | Feature | Description |
